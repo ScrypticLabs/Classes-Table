@@ -1,0 +1,12 @@
+class id = course id + prof name
+
+get courseid from couresesv2 -> courseInfo["course_identifier"]
+get prof name from coursesv2 -> courseInfo["instructors"] -> there are multiple instructors here
+
+get textbooks from coursesv2 -> courseInfo["textbookInfo"]["data"]["books"]["data"]["textbooks"]
+
+get reviews from reviews -> reviews["Professor"] must match the prof found above and reviews["Course_ID"] must match courseid above
+						 -> reviews["Review"]
+
+create an empty field for average a range -> __["Avg-A-Range"] = ""
+create an empty array for average rating  -> __["(not MVP) Avg Rating"] = [0.0]
